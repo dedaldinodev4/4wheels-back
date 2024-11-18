@@ -1,0 +1,1 @@
+export { vehicleImageVehicleRoutes } from './routes'

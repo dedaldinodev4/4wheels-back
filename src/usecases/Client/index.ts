@@ -1,0 +1,1 @@
+export { clientRoutes } from './routes'
