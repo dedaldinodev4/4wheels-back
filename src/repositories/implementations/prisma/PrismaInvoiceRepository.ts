@@ -62,7 +62,7 @@ export class PrismaInvoiceRepository implements IInvoiceRepository {
   }
 
 
-  async delete(id: string): Promise<void> {
+  async delete(id: string, user: string): Promise<void> {
     const invoiceDelete = await this.repository.delete({
       where: {
         id

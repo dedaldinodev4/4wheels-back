@@ -9,9 +9,9 @@ import { vehicleDetailRoutes } from "./usecases/VehicleDetail";
 import { vehicleImageRoutes } from "./usecases/VehicleImage";
 import { vehicleImageVehicleRoutes } from "./usecases/VehicleImageVehicle";
 import { driverRoutes } from "./usecases/Driver";
-//import { securityResponseRoutes } from "./usecases/SecurityResponse";
-//import { userRoleRoutes } from "./usecases/UserRole";
-//import { userPermissionRoutes } from "./usecases/UserPermission";
+import { saleRoutes } from "./usecases/Sale";
+import { rentalRoutes } from "./usecases/Rental";
+import { invoiceRoutes } from "./usecases/Invoice";
 //import { rolePermissionRoutes } from "./usecases/RolePermission";
 //import { userSecurityQuestionRoutes } from "./usecases/UserSecurityQuestion";
 //import { positionRoutes } from "./usecases/Position";
@@ -52,6 +52,9 @@ routes.use(`${PREFIX_ROUTE}/vehicle_images`, vehicleImageRoutes);
 routes.use(`${PREFIX_ROUTE}/drivers`, driverRoutes);
 routes.use(`${PREFIX_ROUTE}/payment_types`, paymentTypeRoutes);
 routes.use(`${PREFIX_ROUTE}/payments`, paymentRoutes);
+routes.use(`${PREFIX_ROUTE}/sales`, saleRoutes);
+routes.use(`${PREFIX_ROUTE}/rentals`, rentalRoutes);
+routes.use(`${PREFIX_ROUTE}/invoices`, invoiceRoutes);
  
 
-export { routes }
+export { routes } 

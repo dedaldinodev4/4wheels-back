@@ -20,7 +20,7 @@ export class PrismaSaleRepository implements ISaleRepository {
     return sale ?? null;
   }
 
-  async findBySeller(saler_id: string, page: number, perPage: number): Promise<IResultPaginated> {
+  async findBySaler(saler_id: string, page: number, perPage: number): Promise<IResultPaginated> {
     const sales = await this.repository.findMany(
       {
         where: { saler_id },
@@ -74,7 +74,7 @@ export class PrismaSaleRepository implements ISaleRepository {
     return saleUpdate;
   }
 
-  async delete(id: string): Promise<void> {
+  async delete(id: string, user: string): Promise<void> {
     const saleDelete = await this.repository.update({
       data: {
         status: Status.CANCELED,

@@ -7,5 +7,5 @@ export interface IRentalRepository {
   findAll(page: number, perPage: number):Promise<IResultPaginated>;
   findById(id: string): Promise<IRental | null>;
   findByStatus(status: string, page: number, perPage: number):Promise<IResultPaginated>;
-  delete(id: string): Promise<void>;
+  delete(id: string, user: string): Promise<void>;
 }

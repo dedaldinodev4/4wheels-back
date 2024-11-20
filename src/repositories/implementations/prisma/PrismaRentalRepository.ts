@@ -64,7 +64,7 @@ export class PrismaRentalRepository implements IRentalRepository {
     return rentalUpdate;
   }
 
-  async delete(id: string): Promise<void> {
+  async delete(id: string, user: string): Promise<void> {
     const rentalDelete = await this.repository.update({
       data: {
         status: Status.CANCELED,

@@ -14,6 +14,6 @@ export interface IInvoiceRequest {
 
 export interface IUpdateInvoiceRequest {
     status: Status;
-    type: string;
+    type: string | null;
 }
 

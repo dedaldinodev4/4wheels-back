@@ -6,7 +6,7 @@ export interface ISaleRepository {
   update(id: string, data: IUpdateSaleRequest): Promise<ISale| Error>;
   findAll(page: number, perPage: number):Promise<IResultPaginated>;
   findById(id: string): Promise<ISale | null>;
-  findBySeller(seler_id: string, page: number, perPage: number): Promise<IResultPaginated>;
+  findBySaler(saler_id: string, page: number, perPage: number): Promise<IResultPaginated>;
   findByStatus(status: string, page: number, perPage: number): Promise<IResultPaginated>;
-  delete(id: string): Promise<void>;
+  delete(id: string, user: string): Promise<void>;
 }
